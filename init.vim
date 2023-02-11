@@ -9,18 +9,31 @@
 :set splitright
 :set splitbelow
 
+
+
 set encoding=UTF-8
 
 call plug#begin('C:\Users\FoY\AppData\Local\nvim\plugged\')
 
+Plug 'https://github.com/neoclide/coc.nvim',{'branch':'release'}		"Auto completion 
+
 Plug 'https://github.com/preservim/nerdtree' 		" NerdTree
 Plug 'https://github.com/tpope/vim-commentary' 		" For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' 	" Status bar
-Plug 'https://github.com/ap/vim-css-color' 		" CSS Color Preview
+Plug 'https://github.com/ap/vim-css-color'			" CSS Color Preview
 Plug 'https://github.com/ryanoasis/vim-devicons' 	" Developer Icons
 Plug 'https://github.com/jiangmiao/auto-pairs' 		" Auto pairs for '(' '[' '{'
-Plug 'https://github.com/neoclide/coc.nvim',{'branch':'release'}		"Auto completion 
-Plug 'https://github.com/mattn/emmet-vim' "Emmet for Fast Markup Coding
+
+Plug 'https://github.com/mattn/emmet-vim'			"Emmet for Fast Markup Coding
+Plug 'https://github.com/unblevable/quick-scope'	"QuickScope for fast horizontal scrolling
+ 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }						" For FZF - Fuzzy Find
+Plug 'junegunn/fzf.vim'													"For FZF - Fuzzy Find
+
+Plug 'https://github.com/honza/vim-snippets'		"For PreLoaded Snippets
+
+Plug 'https://github.com/pangloss/vim-javascript'	"For JS highlight
+Plug 'https://github.com/mxw/vim-jsx'				"For JSX highlight
 
 
 call plug#end()
@@ -242,6 +255,15 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "END OF DEFAULT CONFIGURATIONS
 
+" QuickScope Color Customization
+
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#ffffff' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#000000' gui=underline ctermfg=81 cterm=underline
+augroup END
+" END of QuickScope Color Customization
+
 "FOLDING Settings
 "augroup remember_folds
 "  autocmd!
@@ -250,3 +272,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "augroup END
 "END of FOLDING Settings
 "END of FOLDING Settings
+
+"Color Scheme
+colorscheme default

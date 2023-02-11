@@ -10,7 +10,8 @@
     "typescript.tsx",
     "html",
     "css",
-    "py"
+    "py",
+    "cpp"
   ],
   "eslint.probe": [
     "javascript",
