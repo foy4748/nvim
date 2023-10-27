@@ -8,8 +8,6 @@
 :set mouse=a
 :set splitright
 :set splitbelow
-:set ignorecase
-:set smartcase
 
 " Customizing Active Tab Color
 hi TabLineSel ctermfg=White ctermbg=LightBlue
@@ -19,6 +17,8 @@ set encoding=UTF-8
 
 call plug#begin('C:\Users\faisa\AppData\Local\nvim\plugged')
 
+" Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
+" Plug 'p00f/cphelper.nvim' "For Competative Programming
 Plug 'https://github.com/neoclide/coc.nvim',{'branch':'release'}		"Auto completion 
 
 Plug 'https://github.com/preservim/nerdtree' 		" NerdTree
@@ -274,6 +274,21 @@ augroup END
 "END of FOLDING Settings
 
 "Color Scheme
-colorscheme default
+"colorscheme default
+colorscheme slate
 
-let g:wordpress_vim_wordpress_path="C:\\xampp\\htdocs\\soltrin"
+"For Suppressing 
+"BufWinLeave * mkview with unnamed file: Error 32
+
+" augroup AutoSaveGroup
+"   autocmd!
+"   " view files are about 500 bytes
+"   " bufleave but not bufwinleave captures closing 2nd tab
+"   " nested is needed by bufwrite* (if triggered via other autocmd)
+"   " BufHidden for compatibility with `set hidden`
+"   autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
+"   autocmd BufWinEnter ?* silent! loadview
+" augroup end
+
+"Wordpress Path
+let g:wordpress_vim_wordpress_path="C:\\xampp\\htdocs\\saaslar_it"

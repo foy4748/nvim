@@ -85,5 +85,10 @@
 			}
 		}
 	},
-	"snippets.ultisnips.pythonPrompt": false
+	"snippets.ultisnips.pythonPrompt": false,
+	"clangd.path": "C:\\Program Files\\LLVM\\bin\\clangd.exe",
+	"clangd.arguments": [
+		"--query-driver=/c/Program Files/LLVM/bin/clang++.exe",
+		"--background-index"
+	]
 }
