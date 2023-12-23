@@ -15,7 +15,10 @@ hi TabLineSel ctermfg=White ctermbg=LightBlue
 
 set encoding=UTF-8
 
-call plug#begin('C:\Users\faisa\AppData\Local\nvim\plugged')
+" Fix for :Rg preview window
+let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
+
+call plug#begin('C:\Users\ADMiN\AppData\Local\nvim\plugged')
 
 " Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
 " Plug 'p00f/cphelper.nvim' "For Competative Programming
@@ -44,13 +47,25 @@ Plug 'https://github.com/mxw/vim-jsx'				"For JSX highlight
 Plug 'https://github.com/shawncplus/phpcomplete.vim' "For php complete 
 Plug 'https://github.com/dsawardekar/wordpress.vim' "For Wordpress 
 Plug 'https://github.com/StanAngeloff/php.vim'		"For php syntaxes 
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'} "For TailwindCSS Coc-Extension
+"Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'} "For TailwindCSS Coc-Extension
 call plug#end()
 
+" COC PLUGINS
+" List of All COC Plugins Used in this config
+let g:coc_global_extensions = [
+      \'coc-tsserver',
+      \'coc-prettier',
+      \'coc-json',
+      \'coc-eslint',
+      \'coc-prisma',
+      \'coc-jedi',
+      \'coc-css', 
+      \'coc-json'
+      \]
 
 
-"nnoremap <C-f> :NERDTreeFocus<CR>
-"nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
@@ -291,4 +306,14 @@ colorscheme slate
 " augroup end
 
 "Wordpress Path
-let g:wordpress_vim_wordpress_path="C:\\xampp\\htdocs\\saaslar_it"
+" let g:wordpress_vim_wordpress_path="C:\\xampp\\htdocs\\saaslar_it"
+
+"Setting Up RG preview window
+let $FZF_DEFAULT_OPTS = "--delimiter ':' --preview-window '+{2}-20'"
+
+function! LcnFzfSelectionUI(source, sink) abort
+    return fzf#run(fzf#wrap(fzf#vim#with_preview({'source': a:source, 'sink': a:sink})))
+endfunction
+
+let g:LanguageClient_selectionUI = function('LcnFzfSelectionUI')
+

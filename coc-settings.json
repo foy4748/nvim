@@ -13,7 +13,8 @@
 		"css",
 		"py",
 		"cpp",
-		"vue"
+		"vue",
+		"prisma"
 	],
 	"eslint.probe": [
 		"javascript",
@@ -86,7 +87,7 @@
 		}
 	},
 	"snippets.ultisnips.pythonPrompt": false,
-	"clangd.path": "C:\\Program Files\\LLVM\\bin\\clangd.exe",
+	"clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\17.0.3\\clangd_17.0.3\\bin\\clangd.exe",
 	"clangd.arguments": [
 		"--query-driver=/c/Program Files/LLVM/bin/clang++.exe",
 		"--background-index"
