@@ -18,7 +18,7 @@ set encoding=UTF-8
 " Fix for :Rg preview window
 let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
-call plug#begin('C:\Users\ADMiN\AppData\Local\nvim\plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
 
 " Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
 " Plug 'p00f/cphelper.nvim' "For Competative Programming
@@ -316,4 +316,9 @@ function! LcnFzfSelectionUI(source, sink) abort
 endfunction
 
 let g:LanguageClient_selectionUI = function('LcnFzfSelectionUI')
+
+" Fixing 'node is not executable' error
+" https://stackoverflow.com/questions/61537302/neovim-coc-node-is-not-executable
+
+ " let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'
 
