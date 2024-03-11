@@ -20,8 +20,8 @@ let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
 call plug#begin('$HOME/.config/nvim/plugged')
 
-" Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
-" Plug 'p00f/cphelper.nvim' "For Competative Programming
+Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
+Plug 'p00f/cphelper.nvim' "For Competative Programming
 Plug 'https://github.com/neoclide/coc.nvim',{'branch':'release'}		"Auto completion 
 
 Plug 'https://github.com/preservim/nerdtree' 		" NerdTree
@@ -44,9 +44,12 @@ Plug 'mlaursen/vim-react-snippets'                  "For React Snippets
 Plug 'https://github.com/pangloss/vim-javascript'	"For JS highlight
 Plug 'https://github.com/mxw/vim-jsx'				"For JSX highlight
 
+Plug 'prisma/vim-prisma'							"For Prisma Syntax highlight
+
 Plug 'https://github.com/shawncplus/phpcomplete.vim' "For php complete 
 Plug 'https://github.com/dsawardekar/wordpress.vim' "For Wordpress 
 Plug 'https://github.com/StanAngeloff/php.vim'		"For php syntaxes 
+
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'} "For TailwindCSS Coc-Extension
 call plug#end()
 
@@ -320,5 +323,7 @@ let g:LanguageClient_selectionUI = function('LcnFzfSelectionUI')
 " Fixing 'node is not executable' error
 " https://stackoverflow.com/questions/61537302/neovim-coc-node-is-not-executable
 
- " let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'
+let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'
 
+" Configuring TAILWINDCSS
+au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
