@@ -1,5 +1,5 @@
 :set number
-:set relativenumber
+":set relativenumber
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
@@ -20,7 +20,7 @@ let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
 call plug#begin('$HOME/.config/nvim/plugged')
 
-Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
+"Plug 'nvim-lua/plenary.nvim' "For Lua dependecies
 Plug 'p00f/cphelper.nvim' "For Competative Programming
 Plug 'https://github.com/neoclide/coc.nvim',{'branch':'release'}		"Auto completion 
 
@@ -51,6 +51,14 @@ Plug 'https://github.com/dsawardekar/wordpress.vim' "For Wordpress
 Plug 'https://github.com/StanAngeloff/php.vim'		"For php syntaxes 
 
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'} "For TailwindCSS Coc-Extension
+
+"Plug 'https://github.com/tjdevries/colorbuddy.nvim', { 'branch': 'dev' }	"For Andromeda Theme
+"Plug 'https://github.com/nobbmaestro/nvim-andromeda'						"For Andromeda Theme
+
+Plug 'https://github.com/navarasu/onedark.nvim'						"For OneDark Theme
+"Plug 'https://github.com/EdenEast/nightfox.nvim'					"For NightFox Theme
+"Plug 'https://github.com/catppuccin/nvim', { 'as': 'catppuccin' }	"For Catppuccin Theme
+
 call plug#end()
 
 " COC PLUGINS
@@ -63,7 +71,8 @@ let g:coc_global_extensions = [
       \'coc-prisma',
       \'coc-jedi',
       \'coc-css', 
-      \'coc-json'
+      \'coc-json',
+	  \'coc-yaml'
       \]
 
 
@@ -275,12 +284,11 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "END OF DEFAULT CONFIGURATIONS
 
 " QuickScope Color Customization
-
-augroup qs_colors
-  autocmd!
-  autocmd ColorScheme * highlight QuickScopePrimary guifg='#ffffff' gui=underline ctermfg=155 cterm=underline
-  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#000000' gui=underline ctermfg=81 cterm=underline
-augroup END
+" augroup qs_colors
+"   autocmd!
+"   autocmd ColorScheme * highlight QuickScopePrimary guifg='#ffffff' gui=underline ctermfg=155 cterm=underline
+"   autocmd ColorScheme * highlight QuickScopeSecondary guifg='#000000' gui=underline ctermfg=81 cterm=underline
+" augroup END
 " END of QuickScope Color Customization
 
 "FOLDING Settings
@@ -291,10 +299,42 @@ augroup remember_folds
 augroup END
 "END of FOLDING Settings
 
-"Color Scheme
+"Color Scheme =======================
 "colorscheme default
-colorscheme slate
+"colorscheme slate
 
+
+" === For OneDark theme
+let g:onedark_config = {
+     \ 'style': 'deep',
+ \}
+colorscheme onedark
+" === END
+
+
+" === For Catppuccin theme
+" colorscheme catppuccin
+" === END
+
+
+" === For Material theme
+" let g:material_style = 'deep ocean'
+"let g:material_style = 'pale night'
+"let g:material_style = 'darker'
+" colorscheme material
+" === END
+
+" === For TokyoNight theme
+"colorscheme tokyonight
+
+" There are also colorschemes for the different styles.
+" colorscheme tokyonight-night
+" colorscheme tokyonight-storm
+" colorscheme tokyonight-day
+" colorscheme tokyonight-moon
+" === END
+
+" END Color Scheme =======================
 "For Suppressing 
 "BufWinLeave * mkview with unnamed file: Error 32
 

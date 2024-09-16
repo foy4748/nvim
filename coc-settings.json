@@ -11,10 +11,12 @@
     "typescript.tsx",
     "html",
     "css",
+    "python",
     "py",
     "cpp",
     "vue",
-    "prisma"
+    "prisma",
+    "go"
   ],
   "eslint.probe": [
     "javascript",
@@ -43,8 +45,8 @@
   "jedi.jediSettings.autoImportModules": [],
   "jedi.jediSettings.caseInsensitiveCompletion": true,
   "jedi.jediSettings.debug": false,
-  "jedi.executable.command": "jedi-language-server",
   "jedi.executable.args": [],
+  "jedi.executable.command": "jedi-language-server",
   "jedi.codeAction.nameExtractFunction": "jls_extract_def",
   "jedi.codeAction.nameExtractVariable": "jls_extract_var",
   "jedi.completion.disableSnippets": false,
@@ -69,7 +71,7 @@
   ],
   "languageserver": {
     "intelephense": {
-      "command": "intelephense.cmd",
+      "command": "intelephense",
       "args": ["--stdio"],
       "filetypes": ["php"],
       "initializationOptions": {
