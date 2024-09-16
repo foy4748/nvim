@@ -1,14 +1,25 @@
+-- Enable line numbers
+vim.opt.number = true
+-- Enable relative line numbers
+vim.opt.relativenumber = true
+-- Enable auto indentation
+vim.opt.autoindent = true
+-- Set tab width
+vim.opt.tabstop = 4
+-- Set shift width
+vim.opt.shiftwidth = 4
+-- Enable smart tab
+vim.opt.smarttab = true
+-- Set soft tab stop
+vim.opt.softtabstop = 4
+-- Enable mouse support
+vim.opt.mouse = 'a'
+-- Open new splits to the right
+vim.opt.splitright = true
+-- Open new splits below
+vim.opt.splitbelow = true
+
 vim.cmd([[
-	:set number
-	":set relativenumber
-	:set autoindent
-	:set tabstop=4
-	:set shiftwidth=4
-	:set smarttab
-	:set softtabstop=4
-	:set mouse=a
-	:set splitright
-	:set splitbelow
 
 	" Customizing Active Tab Color
 	hi TabLineSel ctermfg=White ctermbg=LightBlue
@@ -17,7 +28,7 @@ vim.cmd([[
 	set encoding=UTF-8
 
 	" Fix for :Rg preview window
-	let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
+	" let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
 	call plug#begin('$HOME/.config/nvim/plugged')
 
@@ -99,7 +110,7 @@ vim.cmd([[
 
 	"EMMET DEFAULT CONFIGURATIONS
 	let g:user_emmet_settings = {
-	\  'variables': {'lang': 'ja'},
+	\  'variables': {'lang': 'en'},
 	\  'html': {
 	\    'default_attributes': {
 	\      'option': {'value': v:null},
@@ -377,36 +388,31 @@ vim.cmd([[
 	" === END
 
 	" END Color Scheme =======================
-	"For Suppressing 
-	"BufWinLeave * mkview with unnamed file: Error 32
 
-	" augroup AutoSaveGroup
-	"   autocmd!
-	"   " view files are about 500 bytes
-	"   " bufleave but not bufwinleave captures closing 2nd tab
-	"   " nested is needed by bufwrite* (if triggered via other autocmd)
-	"   " BufHidden for compatibility with `set hidden`
-	"   autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
-	"   autocmd BufWinEnter ?* silent! loadview
-	" augroup end
-
-	"Wordpress Path
-	" let g:wordpress_vim_wordpress_path="C:\\xampp\\htdocs\\saaslar_it"
-
-	"Setting Up RG preview window
-	let $FZF_DEFAULT_OPTS = "--delimiter ':' --preview-window '+{2}-20'"
-
-	function! LcnFzfSelectionUI(source, sink) abort
-	    return fzf#run(fzf#wrap(fzf#vim#with_preview({'source': a:source, 'sink': a:sink})))
-	endfunction
-
-	let g:LanguageClient_selectionUI = function('LcnFzfSelectionUI')
-
-	" Fixing 'node is not executable' error
-	" https://stackoverflow.com/questions/61537302/neovim-coc-node-is-not-executable
-
-	let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'
-
-	" Configuring TAILWINDCSS
-	au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
 ]])
+
+-- Setting Up RG preview window
+vim.env.FZF_DEFAULT_OPTS = "--delimiter ':' --preview-window '+{2}-20'"
+-- vim.env.FZF_DEFAULT_OPTS = "--delimiter ':' --preview-window 'right:70%'"
+
+-- Function for LcnFzfSelectionUI
+function LcnFzfSelectionUI(source, sink)
+    return vim.fn'fzf#run'
+end
+
+vim.g.LanguageClient_selectionUI = 'LcnFzfSelectionUI'
+
+-- Configuring TAILWINDCSS
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "html",
+    callback = function()
+        vim.b.coc_root_patterns = {'.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs'}
+    end  -- This 'end' closes the callback function
+})
+
+
+-- Fixing 'node is not executable' error
+-- https://stackoverflow.com/questions/61537302/neovim-coc-node-is-not-executable
+
+-- let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'  " vimscript config
+vim.g.coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node' -- lua config
