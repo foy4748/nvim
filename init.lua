@@ -1,10 +1,13 @@
 require('basic-config')
-require('plugin-installation-config')
-require('coc-plugin-installation-config')
-require('nerdtree-config')
+--require('plugin-installation-config')
+require('plugins')
 
-require('emmet-config')
+-- COC related
+require('coc-plugin-installation-config')
 require('coc-config')
+
+require('nerdtree-config')
+require('emmet-config')
 
 require('quickscope-config')
 require('color-scheme-setter-config')

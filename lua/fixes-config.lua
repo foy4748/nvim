@@ -19,3 +19,6 @@ vim.cmd([[
 
 -- let g:coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node'  " vimscript config
 vim.g.coc_node_path = '/home/foy4748/.nvm/versions/node/v20.10.0/bin/node' -- lua config
+
+-- For turning OFF NeoVim upgradation 0.7 -> 0.8 warning
+vim.g.coc_disable_startup_warning = 1
