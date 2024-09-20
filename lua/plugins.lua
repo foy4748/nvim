@@ -9,7 +9,7 @@ require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
 
   -- Competitive Programming
-  -- use 'p00f/cphelper.nvim'
+  use 'p00f/cphelper.nvim'
 
   -- Auto completion
   use {'neoclide/coc.nvim', branch = 'release'}
@@ -61,7 +61,7 @@ require('packer').startup(function()
 
   -- Themes
   use 'folke/tokyonight.nvim'
-  -- use 'navarasu/onedark.nvim'
+  use 'navarasu/onedark.nvim'
   -- use 'EdenEast/nightfox.nvim'
   -- use {'catppuccin/nvim', as = 'catppuccin'}
 end)
