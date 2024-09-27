@@ -16,7 +16,8 @@
     "cpp",
     "vue",
     "prisma",
-    "go"
+    "go",
+    "lua"
   ],
   "eslint.probe": [
     "javascript",
@@ -79,5 +80,16 @@
       }
     }
   },
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "Lua.diagnostics.globals": ["vim", "use", "lvim"],
+
+  // Pyright related
+  // For Disabling Type Annotations
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
+
+  //Python related
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black"
 }
