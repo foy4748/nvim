@@ -3,7 +3,14 @@ require('basic-config')
 --require('plugin-installation-config')
 
 -- For packer (plugin manager)
-require('plugins')
+-- require('plugins')
+
+-- For lazy (plugin manager)
+-- Please install these
+-- sudo apt install lua5.1 liblua5.1-0-dev luarocks
+-- Then install luarocks and run
+-- :Lazy build luarocks.nvim
+require("config.lazy")
 
 -- COC related
 require('coc-plugin-installation-config')
