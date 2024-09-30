@@ -13,7 +13,7 @@ return {
 	{ "p00f/cphelper.nvim" },
 
 	-- Auto completion
-	{ "neoclide/coc.nvim",              branch = "release" },
+	{ "neoclide/coc.nvim",         branch = "release" },
 
 	-- File explorer
 	{ "preservim/nerdtree" },
@@ -22,7 +22,7 @@ return {
 	{ "tpope/vim-commentary" },
 
 	-- Status bar
-	{ "nvim-lualine/lualine.nvim",      requires = { "nvim-tree/nvim-web-devicons", opt = true } },
+	{ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } },
 
 	-- CSS Color Preview
 	{ "ap/vim-css-color" },
@@ -40,10 +40,14 @@ return {
 	{ "unblevable/quick-scope" },
 
 	-- Fuzzy Finder
-	{ "junegunn/fzf",                   run = function() vim.fn "fzf#install" end },
-	{ "junegunn/fzf.vim" },
+	-- { "junegunn/fzf",                   run = function() vim.fn "fzf#install" end },
+	-- { "junegunn/fzf.vim" },
 
-	{ "nvim-telescope/telescope.nvim",  tag = "0.1.8",                                           requires = { "nvim-lua/plenary.nvim" } },
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
 
 	-- Preloaded snippets
 	{ "honza/vim-snippets" },
@@ -52,12 +56,19 @@ return {
 	-- Highlighting
 	{ "nvim-treesitter/nvim-treesitter" },
 
+	-- -- Highlighting copy
+	{ "machakann/vim-highlightedyank" },
+
 	-- JavaScript and JSX highlighting
 	{ "pangloss/vim-javascript" },
 	{ "mxw/vim-jsx" },
 
 	-- Prisma syntax highlighting
 	{ "prisma/vim-prisma" },
+
+	-- Mini Plugins
+	{ 'echasnovski/mini.nvim',          version = '*' },
+	{ 'echasnovski/mini.animate',       version = '*' },
 
 	-- PHP support
 	{ "shawncplus/phpcomplete.vim" },

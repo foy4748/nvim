@@ -24,8 +24,12 @@ require('ripgrep-fzf-config')
 require('tailwindcss-config')
 require('telescope-config')
 
--- Styling
+-- Styling and Animation
+-- -- Color scheme config
 require('color-scheme-setter-config')
+-- -- mini.animation config
+require('mini.animate').setup()
+require("animate_cursor")
 
 -- For error/warning resolves
 require('fixes-config')
