@@ -79,6 +79,7 @@ return {
 	{ "folke/tokyonight.nvim" },
 	{ "navarasu/onedark.nvim" },
 	{ "scottmckendry/cyberdream.nvim" },
+	{ 'projekt0n/github-nvim-theme',    name = 'github-theme' },
 }
 -- Packer specific
 --[[

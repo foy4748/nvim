@@ -1,7 +1,7 @@
 -- === For CyberDream theme
 -- require('cyberdream').setup {
 -- 	transparent = true,
--- 	italic_comments = false,
+-- 	italic_comments = true,
 -- 	theme = {
 -- 		variant = "default"
 -- 	}
@@ -12,7 +12,9 @@
 
 -- === For OneDark theme
 require('onedark').setup {
-	style = 'deep'
+	style = 'deep',
+	term_colors = true,
+	transparent = true,
 }
 
 require('onedark').load()

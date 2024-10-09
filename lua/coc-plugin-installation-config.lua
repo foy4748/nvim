@@ -1,4 +1,3 @@
-
 vim.cmd([[
 	" COC PLUGINS
 	" List of All COC Plugins Used in this config
@@ -8,9 +7,11 @@ vim.cmd([[
 	      \'coc-json',
 	      \'coc-eslint',
 	      \'coc-prisma',
-	      \'coc-jedi',
-	      \'coc-css', 
+	      \'coc-pyright',
+	      \'coc-css',
 	      \'coc-json',
-		  \'coc-yaml'
+		  \'coc-yaml',
+		  \'coc-snippets',
+		  \'coc-clangd',
 	      \]
 ]])
