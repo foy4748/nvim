@@ -80,6 +80,7 @@ return {
 	{ "navarasu/onedark.nvim" },
 	{ "scottmckendry/cyberdream.nvim" },
 	{ 'projekt0n/github-nvim-theme',    name = 'github-theme' },
+	{ "samharju/synthweave.nvim", },
 }
 -- Packer specific
 --[[

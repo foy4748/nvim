@@ -13,5 +13,6 @@ vim.cmd([[
 		  \'coc-yaml',
 		  \'coc-snippets',
 		  \'coc-clangd',
+		  \'@yaegassy/coc-tailwindcss3',
 	      \]
 ]])
