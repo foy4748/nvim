@@ -20,4 +20,5 @@ vim.opt.mouse = 'a'
 vim.opt.splitright = true
 -- Open new splits below
 vim.opt.splitbelow = true
-
+-- Disabling Ugly Comment BG
+vim.cmd [[highlight Comment ctermbg=NONE guibg=NONE]]

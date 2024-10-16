@@ -1,4 +1,4 @@
--- === For CyberDream theme
+-- === For CyberDream theme ------------------
 require('cyberdream').setup {
 	transparent = true,
 	italic_comments = true,
@@ -10,7 +10,7 @@ require('cyberdream').load()
 -- === END
 
 
--- === For OneDark theme
+-- === For OneDark theme ------------------
 -- require('onedark').setup {
 -- 	style = 'deep',
 -- 	term_colors = true,
@@ -20,9 +20,24 @@ require('cyberdream').load()
 -- require('onedark').load()
 -- === END
 
--- === For TokyoNight theme
+-- === For TokyoNight theme ------------------
 -- require('tokyonight').setup {
--- 	style = 'moon'
+-- 	style = 'moon',
+-- 	transparent = true
 -- }
 -- require('tokyonight').load()
+-- === END
+
+-- === For SynthWeave theme ------------------
+-- require('synthweave').setup {
+-- 	transparent = true
+-- }
+-- require('synthweave').load()
+-- === END
+
+-- === For Andromeda theme ------------------
+-- require('andromeda').setup {
+-- 	transparent_bg = true,
+-- }
+-- require('andromeda').load()
 -- === END
