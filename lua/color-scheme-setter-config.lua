@@ -1,12 +1,12 @@
 -- === For CyberDream theme ------------------
-require('cyberdream').setup {
-	transparent = true,
-	italic_comments = true,
-	theme = {
-		variant = "default"
-	}
-}
-require('cyberdream').load()
+-- require('cyberdream').setup {
+-- 	transparent = true,
+-- 	italic_comments = true,
+-- 	theme = {
+-- 		variant = "default"
+-- 	}
+-- }
+-- require('cyberdream').load()
 -- === END
 
 
@@ -36,8 +36,7 @@ require('cyberdream').load()
 -- === END
 
 -- === For Andromeda theme ------------------
--- require('andromeda').setup {
--- 	transparent_bg = true,
--- }
--- require('andromeda').load()
+require('andromeda').setup({
+	transparent_bg = true,
+})
 -- === END

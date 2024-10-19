@@ -13,22 +13,24 @@ return {
 	{ "p00f/cphelper.nvim" },
 
 	-- Auto completion
-	{ "neoclide/coc.nvim",         branch = "release" },
+	{ "neoclide/coc.nvim",          branch = "release" },
 
 	-- File explorer
-	{ "preservim/nerdtree" },
+	-- { "preservim/nerdtree" },
+	{ 'nvim-tree/nvim-tree.lua',    requires = { "nvim-tree/nvim-web-devicons", opt = true } },
 
 	-- Commenting
 	{ "tpope/vim-commentary" },
 
 	-- Status bar
-	{ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } },
+	{ "nvim-lualine/lualine.nvim",  requires = { "nvim-tree/nvim-web-devicons", opt = true } },
 
 	-- CSS Color Preview
 	{ "ap/vim-css-color" },
 
 	-- Developer Icons
-	{ "ryanoasis/vim-devicons" },
+	-- { "ryanoasis/vim-devicons" },
+	{ "nvim-tree/nvim-web-devicons" },
 
 	-- Auto pairs
 	{ "jiangmiao/auto-pairs" },
@@ -74,6 +76,8 @@ return {
 	{ "shawncplus/phpcomplete.vim" },
 	{ "dsawardekar/wordpress.vim" },
 	{ "StanAngeloff/php.vim" },
+
+	-- -- Appearance
 
 	-- Themes
 	{ "folke/tokyonight.nvim" },
