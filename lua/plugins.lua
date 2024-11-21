@@ -89,4 +89,10 @@ return {
 		"nobbmaestro/nvim-andromeda",
 		dependencies = { "tjdevries/colorbuddy.nvim" }
 	},
+	{ "oxfist/night-owl.nvim", },
+
+	-- Tab Styling
+
+	-- Terminal Access
+	{ 'akinsho/toggleterm.nvim', version = "*", config = true }
 }
