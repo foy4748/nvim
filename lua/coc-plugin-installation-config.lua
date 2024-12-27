@@ -14,5 +14,8 @@ vim.cmd([[
 		  \'coc-snippets',
 		  \'coc-clangd',
 		  \'@yaegassy/coc-tailwindcss3',
+		  \'coc-just-complete',
+		  \'coc-dash-complete',
+		  \'coc-dot-complete',
 	      \]
 ]])

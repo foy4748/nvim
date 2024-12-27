@@ -53,7 +53,7 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Requiring Toggle-Term
 require("toggleterm").setup {
-	size = 5,
+	size = 45,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -62,8 +62,8 @@ require("toggleterm").setup {
 	start_in_insert = true,
 	insert_mappings = true,
 	terminal_mappings = true,
-	persist_size = true,
-	direction = 'horizontal',
+	persist_size = false,
+	direction = 'vertical',
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {

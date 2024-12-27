@@ -94,5 +94,13 @@ return {
 	-- Tab Styling
 
 	-- Terminal Access
-	{ 'akinsho/toggleterm.nvim', version = "*", config = true }
+	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
+
+	-- Tailwind Fold
+	{
+		'razak17/tailwind-fold.nvim',
+		opts = {},
+		dependencies = { 'nvim-treesitter/nvim-treesitter' },
+		ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'javascriptreact', 'php', 'blade' },
+	},
 }

@@ -17,7 +17,8 @@
     "vue",
     "prisma",
     "go",
-    "lua"
+    "lua",
+    "dart"
   ],
   "eslint.probe": [
     "javascript",
