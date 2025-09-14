@@ -18,7 +18,10 @@
     "prisma",
     "go",
     "lua",
-    "dart"
+    "dart",
+    "toml",
+    "liquid",
+    "dot"
   ],
   "eslint.probe": [
     "javascript",
@@ -35,10 +38,11 @@
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
-    "ejs": "html"
+    "ejs": "html",
+    "liquid": "html"
   },
   "html.enable": true,
-  "html.filetypes": ["html", "handlebars", "htmldjango", "blade"],
+  "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "liquid"],
   "html.format.enable": true,
   "jedi.enable": true,
   "jedi.startupMessage": false,

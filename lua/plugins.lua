@@ -61,16 +61,39 @@ return {
 	-- -- Highlighting copy
 	{ "machakann/vim-highlightedyank" },
 
+	-- -- Highlighting Keybindings after pressing leader key
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+		keys = {
+			{
+				"<leader>?",
+				function()
+					require("which-key").show({ global = false })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
+			},
+		},
+	},
+
 	-- JavaScript and JSX highlighting
 	{ "pangloss/vim-javascript" },
 	{ "mxw/vim-jsx" },
+
+	-- Liquid and Formatting
+	{ "tpope/vim-liquid" },
 
 	-- Prisma syntax highlighting
 	{ "prisma/vim-prisma" },
 
 	-- Mini Plugins
-	{ 'echasnovski/mini.nvim',          version = '*' },
-	{ 'echasnovski/mini.animate',       version = '*' },
+	{ 'echasnovski/mini.nvim',        version = '*' },
+	{ 'echasnovski/mini.animate',     version = '*' },
 
 	-- PHP support
 	{ "shawncplus/phpcomplete.vim" },
@@ -83,7 +106,7 @@ return {
 	{ "folke/tokyonight.nvim" },
 	{ "navarasu/onedark.nvim" },
 	{ "scottmckendry/cyberdream.nvim" },
-	{ 'projekt0n/github-nvim-theme',    name = 'github-theme' },
+	{ 'projekt0n/github-nvim-theme',  name = 'github-theme' },
 	{ "samharju/synthweave.nvim", },
 	{
 		"nobbmaestro/nvim-andromeda",
