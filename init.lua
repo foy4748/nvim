@@ -51,6 +51,12 @@ require 'nvim-treesitter.configs'.setup {
 	},
 }
 
+-- Requiring Notify with bg config
+require("notify").setup({
+	background_colour = "#000000",
+})
+
+
 -- Requiring Toggle-Term
 require("toggleterm").setup {
 	size = 45,
